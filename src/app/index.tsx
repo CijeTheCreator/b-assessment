@@ -1,5 +1,18 @@
+import { useRouter } from 'expo-router';
+
 import { LoginScreen } from '@/screens/LoginScreen';
 
 export default function StartRoute() {
-  return <LoginScreen />;
+  const router = useRouter();
+
+  const handleEnterHome = () => {
+    router.replace('/(tabs)/home');
+  };
+
+  return (
+    <LoginScreen
+      onGoogleLoginPress={handleEnterHome}
+      onSignUpPress={handleEnterHome}
+    />
+  );
 }

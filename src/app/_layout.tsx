@@ -2,6 +2,7 @@ import {
   Inter_400Regular,
   Inter_500Medium,
   Inter_600SemiBold,
+  Inter_700Bold,
   useFonts,
 } from '@expo-google-fonts/inter';
 import { DarkTheme, DefaultTheme, Stack, ThemeProvider } from 'expo-router';
@@ -17,6 +18,7 @@ export default function RootLayout() {
     Inter_400Regular,
     Inter_500Medium,
     Inter_600SemiBold,
+    Inter_700Bold,
   });
 
   useEffect(() => {
@@ -33,6 +35,7 @@ export default function RootLayout() {
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack screenOptions={{ headerShown: false }}>
         <Stack.Screen name="index" />
+        <Stack.Screen name="(tabs)" />
       </Stack>
     </ThemeProvider>
   );

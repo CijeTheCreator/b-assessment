@@ -10,6 +10,8 @@ export const ThemeSpacing = {
 } as const;
 
 export const ThemeRadii = {
+  iconButton: 12,
+  card: 32,
   pill: 52,
   full: 9999,
 } as const;
