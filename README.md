@@ -1,56 +1,46 @@
-# Welcome to your Expo app 👋
+# Breet Assessment
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+An [Expo](https://expo.dev) + React Native (TypeScript) mobile app built with [Expo Router](https://docs.expo.dev/router/introduction) file-based navigation, `react-native-reanimated`, `react-native-gesture-handler`, `react-native-svg`, and `expo-image`.
 
-## Get started
+## Screens
 
-1. Install dependencies
+- **Login (`src/app/index.tsx` → `src/screens/LoginScreen`)**: Onboarding / sign-in screen with decorative vector shapes and delivery illustration.
+- **Home (`src/app/(tabs)/home.tsx` → `src/screens/HomeScreen`)**: Greeting header, horizontal snapping E-Bike carousel (`BikeCarousel`), orders CTA banner, and Lottie promo section.
+- **Orders (`src/app/(tabs)/bookmarks.tsx` → `src/screens/OrdersScreen`)**: Package receipt lookup card (`Track Now`) and tracking history list.
+- **Track / Tracking Details (`src/app/(tabs)/track.tsx` → `src/screens/TrackingDetailScreen`)**: Interactive mock vector map (`MockMap`) with route and pins, receipt pill, and a swipeable/tappable bottom sheet revealing the shipment summary card and delivery history timeline.
+- **Settings (`src/app/(tabs)/settings.tsx`)**: Settings tab placeholder.
+
+## Project Structure
+
+```text
+src/
+├── app/                # Expo Router routes & tab layout
+├── assets/             # Extracted icons, images, and Lottie animations
+├── components/         # Shared UI components and custom BottomTabBar
+├── hooks/              # Theme & color scheme hooks
+├── screens/            # Self-contained screen modules (index.tsx, styles.ts, components/)
+├── theme/              # Design tokens (colors, spacing, typography, 375x812 scaling)
+└── __tests__/          # Jest unit tests
+```
+
+## Getting Started
+
+1. Install dependencies:
 
    ```bash
    npm install
    ```
 
-2. Start the app
+2. Start the Expo dev server:
 
    ```bash
-   npx expo start
+   npm start
    ```
 
-In the output, you'll find options to open the app in a
+   From there you can open the app in an iOS simulator, Android emulator, development build, or Expo Go.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Verification Scripts
 
-You can start developing by editing the files inside the **src/app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **example** directory and create a blank **src/app** directory where you can start developing.
-
-### Other setup steps
-
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- **Typecheck**: `npx tsc --noEmit`
+- **Lint**: `npm run lint`
+- **Test**: `npm test`
