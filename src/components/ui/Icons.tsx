@@ -61,3 +61,38 @@ export function ChevronRightIcon({ color = ThemeColors.textItemTitle }: IconProp
     </Svg>
   );
 }
+
+/**
+ * Verbatim left chevron icon (Group 1489.svg in tracking-detail) used for back navigation.
+ */
+export function ChevronLeftIcon({ color = ThemeColors.backIcon }: IconProps) {
+  return (
+    <Svg width={scale(13)} height={scale(14)} viewBox="0 0 13 14" fill="none">
+      <Path
+        d="M6.82107 0.75L0.750046 6.82102L6.82107 12.892"
+        strokeWidth={1.5}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        stroke={color}
+      />
+    </Svg>
+  );
+}
+
+/**
+ * Verbatim two-dot horizontal menu icon (Group 1564.svg).
+ */
+export function TwoDotsIcon({ color = ThemeColors.dotsIcon }: IconProps) {
+  return (
+    <Svg width={scale(13)} height={scale(3)} viewBox="0 0 13 3" fill="none">
+      <Path
+        d="M1.5 3C0.672371 3 0 2.32735 0 1.50063C0 0.673904 0.672371 0 1.5 0C2.32763 0 3 0.673904 3 1.50063C3 2.32735 2.32763 3 1.5 3"
+        fill={color}
+      />
+      <Path
+        d="M11.5 3C10.6724 3 10 2.32735 10 1.50063C10 0.673904 10.6724 0 11.5 0C12.3276 0 13 0.673904 13 1.50063C13 2.32735 12.3276 3 11.5 3"
+        fill={color}
+      />
+    </Svg>
+  );
+}

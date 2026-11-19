@@ -84,4 +84,40 @@ export const Typography = {
     lineHeight: 24,
     letterSpacing: 0.5,
   },
+  screenHeaderTitle: {
+    fontFamily: FontFamilies.interSemiBold,
+    fontSize: 18,
+    lineHeight: 22,
+    letterSpacing: 18 * 0.02, // 0.02em from Figma
+  },
+  estimateValue: {
+    fontFamily: FontFamilies.interSemiBold,
+    fontSize: 24,
+    lineHeight: 24,
+    letterSpacing: 0.5,
+  },
+  summaryCardValue: {
+    fontFamily: FontFamilies.interSemiBold,
+    fontSize: 16,
+    lineHeight: 19,
+    letterSpacing: 0.5,
+  },
+  summaryCardLabel: {
+    fontFamily: FontFamilies.interRegular,
+    fontSize: 12,
+    lineHeight: 15,
+    letterSpacing: 0.5,
+  },
+  timelineTitle: {
+    fontFamily: FontFamilies.interSemiBold,
+    fontSize: 14,
+    lineHeight: 17,
+    letterSpacing: 14 * 0.02, // 0.02em from Figma
+  },
+  timelineTime: {
+    fontFamily: FontFamilies.interRegular,
+    fontSize: 12,
+    lineHeight: 24,
+    letterSpacing: 0.5,
+  },
 } as const;
